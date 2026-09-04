@@ -2,77 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dr. Samjhana Subedi</title>
+  <title>Dr. Samjhana Subedi | Medical Officer Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f2027;
-      color: white;
+    :root {
+      --bg-color: #0b132b;
+      --card-bg: #1c2541;
+      --accent-primary: #00b4d8;
+      --accent-secondary: #90e0ef;
+      --text-main: #ffffff;
+      --text-muted: #adb5bd;
+      --border-color: rgba(0, 180, 216, 0.2);
     }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Hero Header */
     header {
       text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #2c5364, #00c6ff);
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #1d3557, #0b132b);
+      border-bottom: 1px solid var(--border-color);
     }
+
+    .avatar-container {
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent-primary);
+      box-shadow: 0 0 20px rgba(0, 180, 216, 0.3);
+    }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
-    section {
-      padding: 40px;
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--accent-secondary);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .location-nmc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Main Layout */
+    main {
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
+
+    /* Card Component */
     .card {
-      background: #1c1c1c;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 12px;
+      background: var(--card-bg);
+      padding: 30px;
+      margin-bottom: 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
+
+    .card h2 {
+      font-size: 1.3rem;
+      color: var(--accent-secondary);
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+
+    p, li {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    /* Grid for Competencies & Languages */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Links */
+    a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-secondary);
+      text-decoration: underline;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 20px;
-      background: #111;
+      padding: 30px;
+      background: #060913;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
-    a {
-      color: #00c6ff;
+
+    @media (max-width: 768px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 1.7rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>👩‍⚕️ Dr. Samjhana Subedi</h1>
-  <p>MBBS Doctor | Public Health Advocate</p>
-</header>
+  <!-- Hero Header -->
+  <header>
+    <div class="avatar-container">
+      <img src="https://avatars.githubusercontent.com/u/277842300?v=4" alt="Dr. Samjhana Subedi" class="avatar">
+    </div>
+    <h1>Dr. Samjhana Subedi</h1>
+    <p class="subtitle">Medical Officer &bull; MBBS Doctor</p>
+    <p class="location-nmc">Dhapakhel, Lalitpur, Nepal | NMC Reg. No: <REDACTED>[cite: 1]</p>
+  </header>
 
-<section>
-  <div class="card">
-    <h2>About Me</h2>
-    <p>I am a medical doctor focused on combining healthcare with education and digital innovation.</p>
-  </div>
+  <!-- Main Content -->
+  <main>
+    <!-- Professional Summary -->
+    <div class="card">
+      <h2>Professional Summary</h2>
+      <p>Dedicated and detail-oriented Medical Officer currently working at <strong>B&B Hospital, Gwarko</strong>, with extensive clinical experience across outpatient, inpatient, and emergency care settings[cite: 1]. Skilled in patient assessment, diagnosis, emergency stabilization, surgical assistance, and medicolegal case management[cite: 1]. Committed to ethical, evidence-based practice and delivering high-quality patient care[cite: 1].</p>
+    </div>
 
-  <div class="card">
-    <h2>Blog</h2>
-    <p>Coming soon: Articles on public health, preventive care, and medical awareness.</p>
-  </div>
+    <!-- Professional Experience -->
+    <div class="card">
+      <h2>Professional Experience & Internship</h2>
+      <p><strong>Medical Officer</strong> | B&B Hospital, Gwarko (Present)</p>
+      <p style="margin-top: 14px;"><strong>Internship</strong> | National Medical College and Teaching Hospital, Birgunj, Parsa, Nepal (2081–2082)[cite: 1]</p>
+      <ul>
+        <li>Independently managed OPD and IPD services[cite: 1].</li>
+        <li>Assessed, diagnosed, and treated general medical conditions[cite: 1].</li>
+        <li>Managed emergency and acute care cases[cite: 1].</li>
+        <li>Assisted in gynaecological and general surgical procedures[cite: 1].</li>
+        <li>Implemented National Immunization and public health programs[cite: 1].</li>
+        <li>Conducted post-mortem examinations and managed medicolegal cases[cite: 1].</li>
+        <li>Maintained accurate clinical documentation and patient records[cite: 1].</li>
+      </ul>
+    </div>
 
-  <div class="card">
-    <h2>Projects</h2>
-    <p>Medical notes, awareness campaigns, and community initiatives.</p>
-  </div>
+    <!-- Education -->
+    <div class="card">
+      <h2>Educational Qualifications</h2>
+      <p><strong>MBBS (Bachelor of Medicine & Bachelor of Surgery)</strong><br>
+      National Medical College and Teaching Hospital, Birgunj, Parsa, Nepal (2075–2081)[cite: 1]</p>
+      <p style="margin-top: 12px;"><strong>+2 Science (Biology)</strong><br>
+      Prasadi Academy, Lalitpur, Nepal (2073–2074)[cite: 1]</p>
+    </div>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: your-email@example.com</p>
-  </div>
-</section>
+    <!-- Core Competencies & Clinical Exposure -->
+    <div class="grid-2">
+      <div class="card" style="margin-bottom:0;">
+        <h2>Core Competencies</h2>
+        <ul>
+          <li>Clinical diagnosis & treatment planning[cite: 1]</li>
+          <li>Emergency case handling[cite: 1]</li>
+          <li>Surgical assistance[cite: 1]</li>
+          <li>Public health program implementation[cite: 1]</li>
+          <li>Medicolegal documentation[cite: 1]</li>
+          <li>Patient counselling & communication[cite: 1]</li>
+        </ul>
+      </div>
 
-<footer>
-  <p>© 2026 Dr. Samjhana Subedi</p>
-</footer>
+      <div class="card" style="margin-bottom:0;">
+        <h2>Clinical Exposure</h2>
+        <ul>
+          <li>General Medicine[cite: 1]</li>
+          <li>General Surgery[cite: 1]</li>
+          <li>Obstetrics & Gynaecology[cite: 1]</li>
+          <li>Pediatrics[cite: 1]</li>
+          <li>Emergency Medicine[cite: 1]</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Leadership & Languages -->
+    <div class="card" style="margin-top: 24px;">
+      <h2>Leadership & Additional Details</h2>
+      <p><strong>Leadership:</strong> Former Vice President – Blood Bank, NMC Charitable Society[cite: 1].</p>
+      <p style="margin-top: 8px;"><strong>Languages Spoken:</strong> Nepali, English, Hindi, Maithili[cite: 1].</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="card">
+      <h2>Contact Information</h2>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> <a href="mailto:subedisamjhana980@gmail.com">REDACTED@REDACTED</a>[cite: 1]</li>
+        <li><strong>Contact No.:</strong> REDACTED[cite: 1]</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/drsamjna" target="_blank">github.com/drsamjna</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Dr. Samjhana Subedi. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
